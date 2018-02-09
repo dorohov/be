@@ -132,20 +132,22 @@
 			z-index: 1;
 			//top: -8vw;
 			//left: -3vw;
-			top: -40%;
-    		left: -11%;
+			border-radius: 50%;	
+			top: -50%;
+    		left: -50%;
 			width: 964px;
 			height: 964px;
 			opacity: 1;
 			transition: @trs-site;   
 			transform-origin: bottom right;
    			transform: scale(0);
-   			@media @media-point-screen {
-   				border-radius: 50%;			
+   			@media @media-point-xxl {		
 				max-width: 964px;
 				max-height: 964px;
 				width: 100vw;
 				height: 100vw;
+				top: -40%;
+	    		left: -11%;
    			}
 			.card-item__card:hover &,
 			.card-item__card.is--active &{
@@ -282,6 +284,7 @@
 			.card-item__card.is--active &{
 				border: 3px solid @white;			
 				color: @b-color; 
+				color: @white; 
 			}
 		}
 	}
@@ -413,7 +416,7 @@
 				color: @b-color;
 				.card-item__card:hover &,
 				.card-item__card.is--active &{
-					//color: @white;
+					color: @white;
 				}
 			}			
 		}
@@ -436,6 +439,8 @@
 		}
 	}
 	&heading-small{
+		transition: @trs-site;
+		font-weight: 400;
 		&.is--about-header{
 			color: @white;
 			font-size: @b-fs - 2;
@@ -456,6 +461,13 @@
 			.calcFontSize(17, 20, 320, 1680);
 			.calcLineHeight(17, 20, 320, 1680);			
 		}
+		&.is--reviews-page,
+		&.is--reviews-index{
+			.card-item__card:hover &,
+			.card-item__card.is--active &{
+				color: @white;
+			}
+		}
 	}
 	&place{
 		transition: @trs-site;
@@ -465,7 +477,7 @@
 			margin-bottom: 10px;
 			.card-item__card:hover &,
 			.card-item__card.is--active &{
-				color: @b-color;
+				color: @white;
 			}
 		}
 		&.is--school{
@@ -473,6 +485,10 @@
 			line-height: @b-lh - 6;
 			margin-bottom: 5px;
 			span{font-weight: 700;}
+			.card-item__card:hover &,
+			.card-item__card.is--active &{
+				color: @white;
+			}
 		}
 	}
 
@@ -549,6 +565,7 @@
 		}
 	}
 	&cost{
+		transition: @trs-site;
 		&.is--school{
 			padding-top: 35px;
 			font-weight: 400;
@@ -557,6 +574,10 @@
 			.calcFontSize(12, 20, 320, 1680);
 			@media @media-point-screen {
 				padding-top: 2.7vw;
+			}
+			.card-item__card:hover &,
+			.card-item__card.is--active &{
+				color: @white;
 			}
 		}
 		&.is--school-item{
