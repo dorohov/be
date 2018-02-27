@@ -44,10 +44,11 @@
 		&.is--school{
 			background-color: @white;
 			position: relative;
+			height: 100%;
 			overflow: hidden;
-			padding: 20px 25px;
+			padding: 20px 25px 45px;
 			@media @media-point-screen {
-				padding: 2.4vw 2.5vw;
+				padding: 2.4vw 2.5vw 4.2vw;
 			}
 		}
 		&.is--team{
@@ -75,6 +76,9 @@
 		&.is--country,
 		&.is--school{
 			z-index: 3;
+		}
+		&.is--school{
+			height: 100%;
 		}
 		&.is--about-header{
 			padding-left: 65px;
@@ -147,7 +151,7 @@
 				width: 100vw;
 				height: 100vw;
 				top: -40%;
-	    		left: -11%;
+	    		left: -15%;
    			}
 			.card-item__card:hover &,
 			.card-item__card.is--active &{
@@ -193,9 +197,9 @@
 			max-height: 246px;   
 			bottom: 0;
 		    right: 0;
-		    transform: translate(40%, 40%);
+		    transform: translate(45%, 50%);
 			@media @media-point-screen {
-				transform: translate(25%, 25%);
+				transform: translate(30%, 35%);
 			}
 		}
 		&.is--partners{
@@ -269,8 +273,10 @@
 			color: @b-color;	
 		}		
 		&.is--school{
-			bottom: -5px;
+			//bottom: -5px;
+			bottom: -30px;
 			right: -5px;
+			//transform: translateY(100%);
 			width: 40px;
 			height: 40px;
 			border-radius: 50%;
@@ -280,6 +286,9 @@
 				padding: 7px;
 			}
 			color: #dcedf7; 
+			@media @media-point-screen {
+				bottom: -2.8vw;				
+			}
 			.card-item__card:hover &,
 			.card-item__card.is--active &{
 				border: 3px solid @white;			
@@ -567,13 +576,21 @@
 	&cost{
 		transition: @trs-site;
 		&.is--school{
-			padding-top: 35px;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			//transform: translateY(150%);
+			bottom: -30px;
+			//padding-top: 35px;
 			font-weight: 400;
 			//font-size: @b-fs + 2;
 			padding-right: 50px;
 			.calcFontSize(12, 20, 320, 1680);
 			@media @media-point-screen {
-				padding-top: 2.7vw;
+				//padding-top: 2.7vw;
+				bottom: -2.5vw;
 			}
 			.card-item__card:hover &,
 			.card-item__card.is--active &{
@@ -602,6 +619,8 @@
 		display: inline-block;
 		width: 14px;
 		height: 14px;
+		&.is--school{
+		}
 	}
 
 }
